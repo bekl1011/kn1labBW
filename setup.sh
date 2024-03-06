@@ -13,7 +13,7 @@ sudo apt-get install -y python3-psutil
 sudo apt-get install -y python3-netifaces
 sudo apt-get install -y default-jdk
 sudo apt-get install -y dovecot-pop3d
-sudo apt-get install -y postfix
+sudo DEBIAN_FRONTEND=noninteractive apt-get install -y postfix
 
 #The password is necessary to use postfix, which is why it is set here
 sudo useradd -m -s /bin/bash labrat
