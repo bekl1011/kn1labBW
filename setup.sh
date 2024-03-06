@@ -1,18 +1,19 @@
-sudo apt-get update
-sudo apt-get upgrade#
+sudo apt-get -y update
+sudo apt-get -y upgrade
+
 #install necessary packages
-sudo apt-get install mininet
-sudo apt-get install python3-pip
-sudo apt-get install iperf3
-sudo apt-get installpython3-tk
-sudo apt-get install traceroute
-sudo apt-get install bridge-utils
-sudo apt-get install iputils-ping
-sudo apt-get install python3-psutil
-sudo apt-get install python3-netifaces
-sudo apt-get install default-jdk
-sudo apt-get install dovecot-pop3d
-sudo apt-get install postfix
+sudo apt-get install -y mininet
+sudo apt-get install -y python3-pip
+sudo apt-get install -y iperf3
+sudo apt-get install -y python3-tk
+sudo apt-get install -y traceroute
+sudo apt-get install -y bridge-utils
+sudo apt-get install -y iputils-ping
+sudo apt-get install -y python3-psutil
+sudo apt-get install -y python3-netifaces
+sudo apt-get install -y default-jdk
+sudo apt-get install -y dovecot-pop3d
+sudo apt-get install -y postfix
 
 #The password is necessary to use postfix, which is why it is set here
 sudo useradd -m -s /bin/bash labrat
