@@ -31,19 +31,19 @@ mkdir -m 777 /home/labrat/Maildir/tmp
 
 #delete all existing dovecot and postfix config files and replace them with the config fils from the repo
 sudo rm -rf /etc/postfix
-sudo cp -r /home/labrat/kn1labMP/msConfig/postfix /etc
+sudo cp -r /home/labrat/kn1labBW/msConfig/postfix /etc
 sudo rm -rf /etc/dovecot
-sudo cp -r /home/labrat/kn1labMP/msConfig/dovecot /etc
+sudo cp -r /home/labrat/kn1labBW/msConfig/dovecot /etc
 sudo rm -rf /etc/aliases
-sudo cp -r /home/labrat/kn1labMP/msConfig/aliases /etc
+sudo cp -r /home/labrat/kn1labBW/msConfig/aliases /etc
 sudo rm -rf /etc/aliases.db
-sudo cp -r /home/labrat/kn1labMP/msConfig/aliases.db /etc
+sudo cp -r /home/labrat/kn1labBW/msConfig/aliases.db /etc
 sudo rm -rf /etc/mailcap
-sudo cp -r /home/labrat/kn1labMP/msConfig/mailcap /etc
+sudo cp -r /home/labrat/kn1labBW/msConfig/mailcap /etc
 sudo rm -rf /etc/mailcap.order
-sudo cp -r /home/labrat/kn1labMP/msConfig/mailcap.order /etc
+sudo cp -r /home/labrat/kn1labBW/msConfig/mailcap.order /etc
 sudo rm -rf /etc/mailname
-sudo cp -r /home/labrat/kn1labMP/msConfig/mailname /etc
+sudo cp -r /home/labrat/kn1labBW/msConfig/mailname /etc
 
 #After giving the new config files restart the services
 sudo service dovecot restart
