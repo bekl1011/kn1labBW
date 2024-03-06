@@ -1,3 +1,33 @@
+sudo apt-get update
+sudo apt-get upgrade#
+#install necessary packages
+sudo apt-get install mininet
+sudo apt-get install python3-pip
+sudo apt-get install iperf3
+sudo apt-get installpython3-tk
+sudo apt-get install traceroute
+sudo apt-get install bridge-utils
+sudo apt-get install iputils-ping
+sudo apt-get install python3-psutil
+sudo apt-get install python3-netifaces
+sudo apt-get install default-jdk
+sudo apt-get install dovecot-pop3d
+sudo apt-get install postfix
+
+#The password is necessary to use postfix, which is why it is set here
+sudo useradd -m -s /bin/bash labrat
+echo 'labrat:kn1lab' | sudo chpasswd
+
+pip3 install --upgrade pip 
+pip3 install cpunetlog
+pip3 install matplotlib
+pip3 install ipykernel
+git clone https://github.com/bekl1011/CPUnetPLOT
+mkdir -m 777 /home/labrat/Maildir
+mkdir -m 777 /home/labrat/Maildir/new
+mkdir -m 777 /home/labrat/Maildir/cur
+mkdir -m 777 /home/labrat/Maildir/tmp
+
 #delete all existing dovecot and postfix config files and replace them with the config fils from the repo
 sudo rm -rf /etc/postfix
 sudo cp -r /home/labrat/kn1labMP/msConfig/postfix /etc
@@ -64,12 +94,6 @@ sudo tee -a /etc/hosts << EOF
 10.0.0.2 c2
 10.0.0.3 sv1
 EOF
-
-#Whn the vm is started, the owning rights for the files are wrong, so they can not be edited, unless the rights are changed
-sudo chown -R labrat /home/labrat/kn1labMP
-
-#The password is necessary to use postfix, which is why it is set here
-echo 'labrat:kn1lab' | sudo chpasswd
 
 #Change the congestion control algorithm for tcp from cubic to reno, to better see som congestion control mechanisms in versuch4
 echo "net.ipv4.tcp_congestion_control = reno" | sudo tee -a /etc/sysctl.conf
