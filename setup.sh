@@ -16,36 +16,33 @@ sudo apt-get install -y dovecot-pop3d
 sudo DEBIAN_FRONTEND=noninteractive apt-get install -y postfix
 
 #The password is necessary to use postfix, which is why it is set here
-sudo useradd -m -s /bin/bash labrat
-echo 'labrat:kn1lab' | sudo chpasswd
+echo 'ubuntu:kn1lab' | sudo chpasswd
 
 pip3 install --upgrade pip 
 pip3 install cpunetlog
 pip3 install matplotlib
 pip3 install ipykernel
 git clone https://github.com/bekl1011/CPUnetPLOT
-sudo mkdir -m 777 /home/labrat/Maildir
-sudo mkdir -m 777 /home/labrat/Maildir/new
-sudo mkdir -m 777 /home/labrat/Maildir/cur
-sudo mkdir -m 777 /home/labrat/Maildir/tmp
-cd /home/labrat
-sudo git clone https://github.com/bekl1011/kn1labBW
+sudo mkdir -m 777 /home/ubuntu/Maildir
+sudo mkdir -m 777 /home/ubuntu/Maildir/new
+sudo mkdir -m 777 /home/ubuntu/Maildir/cur
+sudo mkdir -m 777 /home/ubuntu/Maildir/tmp
 
 #delete all existing dovecot and postfix config files and replace them with the config fils from the repo
 sudo rm -rf /etc/postfix
-sudo cp -r /home/labrat/kn1labBW/msConfig/postfix /etc
+sudo cp -r /home/ubuntu/kn1labBW/msConfig/postfix /etc
 sudo rm -rf /etc/dovecot
-sudo cp -r /home/labrat/kn1labBW/msConfig/dovecot /etc
+sudo cp -r /home/ubuntu/kn1labBW/msConfig/dovecot /etc
 sudo rm -rf /etc/aliases
-sudo cp -r /home/labrat/kn1labBW/msConfig/aliases /etc
+sudo cp -r /home/ubuntu/kn1labBW/msConfig/aliases /etc
 sudo rm -rf /etc/aliases.db
-sudo cp -r /home/labrat/kn1labBW/msConfig/aliases.db /etc
+sudo cp -r /home/ubuntu/kn1labBW/msConfig/aliases.db /etc
 sudo rm -rf /etc/mailcap
-sudo cp -r /home/labrat/kn1labBW/msConfig/mailcap /etc
+sudo cp -r /home/ubuntu/kn1labBW/msConfig/mailcap /etc
 sudo rm -rf /etc/mailcap.order
-sudo cp -r /home/labrat/kn1labBW/msConfig/mailcap.order /etc
+sudo cp -r /home/ubuntu/kn1labBW/msConfig/mailcap.order /etc
 sudo rm -rf /etc/mailname
-sudo cp -r /home/labrat/kn1labBW/msConfig/mailname /etc
+sudo cp -r /home/ubuntu/kn1labBW/msConfig/mailname /etc
 
 #After giving the new config files restart the services
 sudo service dovecot restart
