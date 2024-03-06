@@ -24,10 +24,12 @@ pip3 install cpunetlog
 pip3 install matplotlib
 pip3 install ipykernel
 git clone https://github.com/bekl1011/CPUnetPLOT
-mkdir -m 777 /home/labrat/Maildir
-mkdir -m 777 /home/labrat/Maildir/new
-mkdir -m 777 /home/labrat/Maildir/cur
-mkdir -m 777 /home/labrat/Maildir/tmp
+sudo mkdir -m 777 /home/labrat/Maildir
+sudo mkdir -m 777 /home/labrat/Maildir/new
+sudo mkdir -m 777 /home/labrat/Maildir/cur
+sudo mkdir -m 777 /home/labrat/Maildir/tmp
+cd /home/labrat
+sudo git clone https://github.com/bekl1011/kn1labBW
 
 #delete all existing dovecot and postfix config files and replace them with the config fils from the repo
 sudo rm -rf /etc/postfix
@@ -104,5 +106,3 @@ sudo sysctl -p
 code --install-extension vscjava.vscode-java-pack
 code --install-extension ms-python.python
 code --install-extension ms-toolsai.jupyter
-
-
