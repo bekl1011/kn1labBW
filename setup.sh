@@ -23,7 +23,7 @@ pip3 install cpunetlog
 pip3 install matplotlib
 pip3 install ipykernel
 cd /
-git clone https://github.com/bekl1011/CPUnetPLOT
+sudo git clone https://github.com/bekl1011/CPUnetPLOT
 cd /home/ubuntu
 sudo mkdir -m 777 /home/ubuntu/Maildir
 sudo mkdir -m 777 /home/ubuntu/Maildir/new
