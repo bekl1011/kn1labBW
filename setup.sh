@@ -1,18 +1,18 @@
-sudo apt-get -y update
-sudo apt-get -y upgrade
+sudo DEBIAN_FRONTEND=noninteractive apt-get -y update
+sudo DEBIAN_FRONTEND=noninteractive apt-get -y upgrade
 
 #install necessary packages
-sudo apt-get install -y mininet
-sudo apt-get install -y python3-pip
-sudo apt-get install -y iperf3
-sudo apt-get install -y python3-tk
-sudo apt-get install -y traceroute
-sudo apt-get install -y bridge-utils
-sudo apt-get install -y iputils-ping
-sudo apt-get install -y python3-psutil
-sudo apt-get install -y python3-netifaces
-sudo apt-get install -y default-jdk
-sudo apt-get install -y dovecot-pop3d
+sudo DEBIAN_FRONTEND=noninteractive apt-get install -y mininet
+sudo DEBIAN_FRONTEND=noninteractive apt-get install -y python3-pip
+sudo DEBIAN_FRONTEND=noninteractive apt-get install -y iperf3
+sudo DEBIAN_FRONTEND=noninteractive apt-get install -y python3-tk
+sudo DEBIAN_FRONTEND=noninteractive apt-get install -y traceroute
+sudo DEBIAN_FRONTEND=noninteractive apt-get install -y bridge-utils
+sudo DEBIAN_FRONTEND=noninteractive apt-get install -y iputils-ping
+sudo DEBIAN_FRONTEND=noninteractive apt-get install -y python3-psutil
+sudo DEBIAN_FRONTEND=noninteractive apt-get install -y python3-netifaces
+sudo DEBIAN_FRONTEND=noninteractive apt-get install -y default-jdk
+sudo DEBIAN_FRONTEND=noninteractive apt-get install -y dovecot-pop3d
 sudo DEBIAN_FRONTEND=noninteractive apt-get install -y postfix
 
 #The password is necessary to use postfix, which is why it is set here
