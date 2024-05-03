@@ -1,7 +1,7 @@
 # Versuch 1 - Anwendungsschicht
 
-## Änderungen durch Nutzung von Multipass
-Ihr Mailpostfach befindet sich ebenfalls in dem in dieser Beschreibung genannten Ordner, sollten Sie jedoch direkt das Repository in Visual Studio Code geöffnet haben, ist dieser für Sie nicht einsehbar und Sie müssen dafür das Home-Verzeichnis Ihres Benutzers wechseln. Dies geht mit der Funktion `Open Folder`.
+## Änderungen durch Nutzung einer VM aus der BWCloud
+Ihr Mailpostfach befindet sich ebenfalls in dem in dieser Beschreibung genannten Ordner, sollten Sie jedoch direkt das Repository in Visual Studio Code geöffnet haben, ist dieser für Sie erstmal nicht einsehbar. Sie könnent mit der Funktion `Add Folder to Workspace` den Ornder in Ihrem repo anzeigen lassen.
 
 ## Anmeldeinformationen und MailDir-Ordner
 
